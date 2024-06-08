@@ -1,25 +1,23 @@
 :root {
-	--red: #AA224B;
-	--black: #040404;
-	--latte: #FFF8E7;
+	--black: #040404; /* var(--black) */
+	--latte: #FFF8E7; /* var(--latte) */
 
-	--text-color: var(--latte);
 	--text-fonts: 'OpenDyslexic', 'Atkinson Hyperlegible', Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
 }
 
 html {
 	background-color: var(--black);
-	color: var(--text-color);
+	color: var(--latte);
 	font: 1em var(--text-fonts);
 }
 
 a[href] {
-	color: var(--text-color);
+	color: var(--latte);
 }
 
 /* Navigation Bar - Add a black background color to the top navigation */
 .topnav {
-	background-color: #040404;
+	background-color: var(--black);
 	border-bottom: 2px solid #333;
 	overflow: hidden;
 }
@@ -28,7 +26,7 @@ a[href] {
 	.topnav a {
 		float: left;
 		display: block;
-		color: var(--text-color);
+		color: var(--latte);
 		font: 1em var(--text-fonts);
 		text-align: center;
 		padding: 14px 16px;
@@ -39,7 +37,7 @@ a[href] {
 	/* Change the color of links on hover */
 	.topnav a:hover {
 		background-color: #1F1F1F;
-		color: var(--text-color);
+		color: var(--latte);
 	}
   
 	/* Add a color to the active/current link */
@@ -92,66 +90,3 @@ a[href] {
 	  		text-align: left;
 		}
 	}
-
-/* Hamburger Icon */
-.icon-menu {
-	--gap: 5px;
-	--height-bar: 2.5px;
-	--pos-y-bar-one: 0;
-	--pos-y-bar-three: 0;
-	--scale-bar: 1;
-	--rotate-bar-one: 0;
-	--rotate-bar-three: 0;
-	width: 25px;
-	display: flex;
-	flex-direction: column;
-	gap: var(--gap);
-	cursor: pointer;
-	position: relative;
-}
-  
-  	.bar {
-		position: relative;
-		height: var(--height-bar);
-		width: 100%;
-		border-radius: .5rem;
-		background-color: var(--latte);
-  	}
-  
-  	.bar--1 {
-		top: var(--pos-y-bar-one);
-		transform: rotate(var(--rotate-bar-one));
-		transition: top 200ms 100ms, transform 100ms;
-  	}
-  
-  	.bar--2 {
-		transform: scaleX(var(--scale-bar));
-		transition: transform 150ms 100ms;
-  	}
-  
-  	.bar--3 {
-		bottom: var(--pos-y-bar-three);
-		transform: rotate(var(--rotate-bar-three));
-		transition: bottom 200ms 100ms, transform 100ms;
-  	}
-  
-  	.check-icon:checked + .icon-menu > .bar--1 {
-		transition: top 200ms, transform 200ms 100ms;
-  	}
-  
-	.check-icon:checked + .icon-menu > .bar--3 {
-		transition: bottom 200ms, transform 200ms 100ms;
-	}
-  
-	.check-icon:checked + .icon-menu {
-		--pos-y-bar-one: calc(var(--gap) + var(--height-bar));
-		--pos-y-bar-three: calc(var(--gap) + var(--height-bar));
-		--scale-bar: 0;
-		--rotate-bar-one: 45deg;
-		--rotate-bar-three: -45deg;
-	}
-
-	/* FIN ICON-MENU */
-  
-  
-  
