@@ -97,6 +97,7 @@ a:hover {
 	}
 	.topnav.responsive a {
 			float: none;
+			margin-bottom: 0;
 			display: block;
 			text-align: left;
 	}
