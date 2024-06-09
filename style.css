@@ -1,5 +1,8 @@
 :root {
 	--black: #040404; /* var(--black) */
+	--gray: #333; /* var(--gray) */
+	--light-gray: #999999; /* var(--light-gray) */
+	--dark-gray: #1F1F1F; /* var(--dark-gray) */
 	--latte: #FFF8E7; /* var(--latte) */
 
 	--text-fonts: 'OpenDyslexic', 'Atkinson Hyperlegible', Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
@@ -15,10 +18,29 @@ a[href] {
 	color: var(--latte);
 }
 
+footer {
+	background-color: var(--dark-gray);
+	padding: 30px;
+	text-align: center;
+}
+
+.footer-socials {
+	padding-bottom: 3px;
+}
+
+a {
+	color: var(--latte);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--light-gray);
+}
+
 /* Navigation Bar - Add a black background color to the top navigation */
 .topnav {
 	background-color: var(--black);
-	border-bottom: 2px solid #333;
+	border-bottom: 2px solid var(--gray);
 	overflow: hidden;
 }
   
@@ -36,7 +58,7 @@ a[href] {
   
 	/* Change the color of links on hover */
 	.topnav a:hover {
-		background-color: #1F1F1F;
+		background-color: var(--dark-gray);
 		color: var(--latte);
 	}
   
@@ -90,3 +112,7 @@ a[href] {
 	  		text-align: left;
 		}
 	}
+
+.footer {
+	text-align: center;
+}
