@@ -1,9 +1,10 @@
 :root {
 	--black: #040404; /* var(--black) */
-	--gray: #333; /* var(--gray) */
+	--gray: ##212121; /* var(--gray) */
 	--light-gray: #999999; /* var(--light-gray) */
 	--dark-gray: #1F1F1F; /* var(--dark-gray) */
 	--latte: #FFF8E7; /* var(--latte) */
+	--yellow: #FFF600; /* var(--yellow) */
 
 	--text-fonts: 'OpenDyslexic', 'Atkinson Hyperlegible', Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
 }
